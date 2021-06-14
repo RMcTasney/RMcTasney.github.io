@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<!--UATSpace page
+    written by: James McTasney
+    -->
+
+<html lang="en">
+  <head>
+    <link href="UATstyle.css" rel="stylesheet" type="text/css" />
+    <script src="code.js"></script>
+    <script src="dataLoader-1.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>James McTasney's UATSpace Page</title>
+  </head>
+
+  <body>
+
+    <!--Needed for teh DOM-->
+    <script>
+      // create needed variables
+
+      var theTime = new Date();
+      var tempTime = new Date();
+      var time_interval = 5000; 
+      var last_iteration = 0; 
+      var running = true; 
+      var index = 0; 
+      var timer; 
+
+      // to get data for our table
+      var data = getData(); 
+
+      // data from dataloader() to our table
+      function updateDisplay() {
+        theTime = new Date(); 
+
+        // fill in the table
+        var timeRead = data[index].time_seconds; 
+        console.log("made it here"); 
+        if(timeRead >= 10){
+          document.getElementById("data").rows["seconds"].innerHTML = dataRow("Time Elapsed", data[index].time_seconds, "seconds");
+          document.getElementById("data").rows["latitude"].innerHTML = dataRow("Latitude", data[index].latitude, " ");
+          document.getElementById("data").rows["longitude"].innerHTML = dataRow("Longitude", data[index].longitude, " ");
+          document.getElementById("data").rows["gps_altitude"].innerHTML = dataRow("GPS Altitude", data[index].gps_altitude, " ");
+          document.getElementById("data").rows["bmpSensor_altitude"].innerHTML = dataRow("BMP Sensor Altitude", data[index].bmpSensor_altitude, " ");
+          document.getElementById("data").rows["bmpSensor_pressure"].innerHTML = dataRow("BMP Sensor Pressure", data[index].bmpSensor_pressure, " ");
+          document.getElementById("data").rows["bmpSensor_temp"].innerHTML = dataRow("BMP Sensor Temperature", data[index].bmpSensor_temp, " ");
+          document.getElementById("data").rows["digSensor_temp"].innerHTML = dataRow("Digital Sensor Temperature", data[index].digSensor_temp, " ");
+          document.getElementById("data").rows["cssSensor_temp"].innerHTML = dataRow("CSS Sensor Temperature", data[index].cssSensor_temp, " ");
+          document.getElementById("data").rows["cssSensor_eCO2"].innerHTML = dataRow("CSS Sensor eCO2", data[index].cssSensor_eCO2, " ");
+          document.getElementById("data").rows["cssSensor_TVOC"].innerHTML = dataRow("CSS Sensor TVOC", data[index].cssSensor_TVOC, " ");
+          document.getElementById("data").rows["UV"].innerHTML = dataRow("UV", data[index].UV, " ");
+          document.getElementById("data").rows["accelX"].innerHTML = dataRow("accelX", data[index].accelX, " ");
+          document.getElementById("data").rows["accelY"].innerHTML = dataRow("accelY", data[index].accelY, " ");
+          document.getElementById("data").rows["accelZ"].innerHTML = dataRow("accelZ", data[index].accelZ, " ");
+          document.getElementById("data").rows["magneticX"].innerHTML = dataRow("magneticX", data[index].magneticX, " ");
+          document.getElementById("data").rows["magneticY"].innerHTML = dataRow("magneticY", data[index].magneticY, " ");
+          document.getElementById("data").rows["magneticZ"].innerHTML = dataRow("magneticZ", data[index].magneticZ, " ");
+          document.getElementById("data").rows["gyroX"].innerHTML = dataRow("gyroX", data[index].gyroX, " ");
+          document.getElementById("data").rows["gyroY"].innerHTML = dataRow("gyroY", data[index].gyroY, " ");
+          document.getElementById("data").rows["gyroZ"].innerHTML = dataRow("gyroZ", data[index].gyroZ, " ");
+        }
+
+        if(index < 500){
+          index++;
+
+        } else {
+          index = 0;
+        }
+
+      }
+
+    </script>
+
+
+
+    <!-- Making a table to hold h1 title and jpg-->
+
+    <table>
+      <td><img src="UATspaceLogo-2.jpg" /></td>
+      <td>
+        <h1>
+          UAT Space Program
+          <!--Header 1-->
+        </h1>
+      </td>
+    </table>
+
+    <!-- start of table -->
+    <!-- table style -->
+    <table border="2" width="70%" id="data">
+      <col style="width: 35%" />
+      <col style="width: 35%" />
+      <!-- table heads -->
+      <thead>
+        <tr style="font-family: fantasy">
+          <th>Data Type</th>
+          <th>Reading</th>
+        </tr>
+      </thead>
+      <!-- the body of the table and the <tr>s are the entries for each line -->
+      <tbody>
+        <tr id="seconds"></tr>
+        <tr id="latitude"></tr>
+        <tr id="longitude"></tr>
+        <tr id="gps_altitude"></tr>
+        <tr id="bmpSensor_altitude"></tr>
+        <tr id="bmpSensor_pressure"></tr>
+        <tr id="bmpSensor_temp"></tr>
+        <tr id="digSensor_temp"></tr>
+        <tr id="cssSensor_temp"></tr>
+        <tr id="cssSensor_eCO2"></tr>
+        <tr id="cssSensor_TVOC"></tr>
+        <tr id="UV"></tr>
+        <tr id="accelX"></tr>
+        <tr id="accelY"></tr>
+        <tr id="accelZ"></tr>
+        <tr id="magneticX"></tr>
+        <tr id="magneticY"></tr>
+        <tr id="magneticZ"></tr>
+        <tr id="gyroX"></tr>
+        <tr id="gyroY"></tr>
+        <tr id="gyroZ"></tr>
+      </tbody>
+    </table>
+
+    <br />
+
+    <button class="button" id="startButton" onclick="start();">Start</button>
+    <button class="button" id="stopButton" onclick="stop();">Stop</button> <br> <br>
+    <a href="index.html"><button class="button">Back To Home Page</button></a>
+  </body>
+</html>

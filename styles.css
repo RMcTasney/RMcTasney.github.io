@@ -1,0 +1,466 @@
+body {
+  background-color: white;
+  margin: 0;
+}
+
+body a {
+  text-decoration: none;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #e0ecd0;
+  margin: 0;
+  padding: 1em;
+}
+
+header .logo a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #94662b;
+}
+
+header .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+}
+
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  font-size: 1.5em;
+  margin: 0 12px;
+}
+
+header nav ul a {
+  color: black;
+}
+
+footer {
+  background-color: #0C3C60;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+footer ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  margin: 10px;
+  margin-top: 25px;
+  padding: 0;
+}
+
+footer li {
+  display: inline-block;
+}
+
+/* Home Page */
+.hero-image {
+  position: relative;
+  max-height: 900px;
+  overflow: hidden;
+  margin-bottom: 0px;
+  padding-bottom: 0;
+}
+
+.hero-image img {
+  width: 100%;
+}
+
+.marketing-bar {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(148, 102, 43, 0.705);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  margin-bottom: 3px;
+}
+
+.marketing-bar h1 {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.marketing-bar h2 {
+  color: gold;
+  font-size: 1em;
+  margin: 5px;
+  text-align: center;
+}
+
+.marketing-boxes {
+  display: inline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 90px;
+  text-align: center;
+}
+
+.marketing-boxes .flex {
+  display: inline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.marketing-boxes img {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+}
+
+.marketing-boxes .box-h {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  margin-top: 20px;
+  padding: 5px;
+  background-color: #94662b;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.marketing-boxes h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 0;
+  color: white;
+}
+
+.marketing-boxes button {
+  background-color: #0C3C60;
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  padding: 8px 30px;
+  cursor: pointer;
+}
+
+.about-us {
+  background-color: rgba(148, 102, 43, 0.705);
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 25px;
+}
+
+.about-us h1 {
+  margin-bottom: 10px;
+  margin-top: 0px;
+  font-size: 2em;
+  text-decoration: underline;
+}
+
+.about-us p {
+  max-width: 1000px;
+  font-size: 1.25em;
+  margin: 0 auto 20px;
+  line-height: 1.5em;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.about-us button {
+  background-color: #0C3C60;
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  padding: 8px 30px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.contact-us {
+  background-color: #94662b;
+  padding: 10px;
+  text-align: center;
+}
+
+.contact-us h1 {
+  color: #fff;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  font-size: 2em;
+  text-decoration: underline;
+}
+
+.contact-us .flex {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1000px;
+}
+
+/* About Page */
+.about-image {
+  position: relative;
+  max-height: 900px;
+  overflow: hidden;
+  margin-bottom: 0px;
+  padding-bottom: 0;
+}
+
+.about-image img {
+  width: 100%;
+}
+
+.marketing-bar-about {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(148, 102, 43, 0.705);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+}
+
+.marketing-bar-about h1 {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  margin-left: 10%;
+}
+
+.marketing-bar-about h2 {
+  color: gold;
+  font-size: 1em;
+  margin: 5px;
+  margin-left: 15%;
+}
+
+.about-us-about {
+  background-color: rgba(148, 102, 43, 0.705);
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 0px;
+}
+
+.about-us-about h2 {
+  margin-bottom: 10px;
+  margin-top: 0px;
+  font-size: 2em;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.about-us-about p {
+  max-width: 1000px;
+  font-size: 1.25em;
+  margin: 0 auto 20px;
+  line-height: 1.5em;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* Project Page */
+.project-image {
+  position: relative;
+  max-height: 900px;
+  overflow: hidden;
+  margin-bottom: 0px;
+  padding-bottom: 0;
+}
+
+.project-image img {
+  width: 100%;
+}
+
+.marketing-bar-project {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(148, 102, 43, 0.705);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  margin-bottom: 3px;
+}
+
+.marketing-bar-project h1 {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  margin-left: 10%;
+}
+
+.marketing-bar-project h2 {
+  color: gold;
+  font-size: 1em;
+  margin: 5px;
+  margin-left: 15%;
+}
+
+.box {
+  display: inline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 90px;
+}
+
+.box .flex {
+  display: inline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.box .one, .box .two {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px;
+  margin-top: 0px;
+  padding: 5px;
+  background-color: rgba(148, 102, 43, 0.65);
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.box .one ul, .box .two ul {
+  margin-left: -10px;
+}
+
+.box .one img, .box .two img {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+}
+
+.box .one {
+  margin-top: 10px;
+}
+
+.box .two {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.box h2 {
+  text-align: center;
+  color: white;
+}
+
+.box .button2 {
+  background-color: #0C3C60;
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  padding: 8px 30px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.box .button1 {
+  display: none;
+}
+
+/* Rover Page */
+.about-image-rover {
+  position: relative;
+  max-height: 900px;
+  overflow: hidden;
+  margin-bottom: -5px;
+  padding-bottom: 0;
+}
+
+.about-image-rover img {
+  width: 100%;
+}
+
+.marketing-bar-rover {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(148, 102, 43, 0.705);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  margin-bottom: 3px;
+}
+
+.marketing-bar-rover h1 {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  margin-left: 10%;
+}
+
+.marketing-bar-rover h2 {
+  color: gold;
+  font-size: 1em;
+  margin: 5px;
+  margin-left: 15%;
+}
+
+.rover-about {
+  background-color: rgba(148, 102, 43, 0.6);
+  color: black;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-top: 0px;
+}
+
+.rover-about h3 {
+  margin-left: 10px;
+}
+
+.rover-about h2 {
+  margin-bottom: 10px;
+  margin-top: 0px;
+  font-size: 2em;
+  text-decoration: underline;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.rover-about p {
+  max-width: 1000px;
+  font-size: 1.25em;
+  margin: 0 auto 20px;
+  line-height: 1.5em;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.rover-about button {
+  background-color: #0C3C60;
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  padding: 8px 30px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */
